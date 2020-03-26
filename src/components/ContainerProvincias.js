@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
+import Provincia from './Provincia'
 
 
 
 
 class ContainerProvincias extends Component {
     state = {  }
+
+    
+
     render() { 
+      const {pais}=this.props;
+
         return (
-            <svg width='40vh' viewBox="0 0 1948.2 3756.13" {...this.props}>
+
+          <svg width='40vh' viewBox="0 0 1948.2 3756.13" {...this.props}>
       <defs>
         <style>
           {
@@ -19,11 +26,13 @@ class ContainerProvincias extends Component {
       <g id="prefix__Capa_2" data-name="Capa 2">
         <g id="prefix__svg2">
           <g id="prefix__layer1"></g>
-          {this.props.path}
+          {pais.map(mapaProvincia => <Provincia provincia={mapaProvincia}/>)}
           </g>
         </g>
       
     </svg>
+          
+            
         );
     }
 }
