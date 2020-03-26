@@ -18,7 +18,7 @@ class ContainerProvincias extends Component {
       <defs>
         <style>
           {
-            ".prefix__cls-1,.prefix__cls-2,.prefix__cls-3,.prefix__cls-4{fill:#ccc;stroke:#646464;stroke-width:2.13px}.prefix__cls-1,.prefix__cls-2,.prefix__cls-3{stroke-linecap:square}.prefix__cls-1,.prefix__cls-2{stroke-linejoin:bevel}.prefix__cls-1,.prefix__cls-3,.prefix__cls-4{fill-rule:evenodd}.prefix__cls-3,.prefix__cls-4{stroke-linejoin:round}"
+            ".cls-1,.cls-2,.cls-3,.cls-4{fill:#ccc;stroke:#646464;stroke-width:2.13px}.cls-1,.cls-2,.cls-3{stroke-linecap:square}.cls-1,.cls-2{stroke-linejoin:bevel}.cls-1,.cls-3,.cls-4{fill-rule:evenodd}.cls-3,.cls-4{stroke-linejoin:round}"
           }
         </style>
       </defs>

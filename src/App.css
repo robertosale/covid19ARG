@@ -20,7 +20,7 @@
 }
 
 /* todos los items que empiecen su ID con Prefix */
-[id^="prefix"]:hover{
+[id^="path"]:hover{
   fill: #7e2337;
   transition: 0.5s ease;
 }
