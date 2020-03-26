@@ -9,7 +9,7 @@ import ContainerProvincias from './components/ContainerProvincias';
 class App extends Component {
   state = {  }
   render() { 
-    console.log("pais:::::::::::::",pais)
+    //console.log("pais:::::::::::::",pais)
     return (
       <div className="App">
         <header className="App-header">
