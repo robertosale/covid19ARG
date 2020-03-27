@@ -1,17 +1,31 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component,Fragment } from 'react';
+import { Tooltip } from 'reactstrap';
+
 
 
 class Provincia extends Component {
-    state = {  }
+    state = { tooltipOpen: false }
+
+ 
+
     render() { 
+
+             
+        const {tooltipOpen} = this.state;
         const {provincia} = this.props;
-        //console.log("PROVINCIA::::::::",provincia.path)
+
+        const toggle = ()=> this.setState({tooltipOpen:!tooltipOpen})
+
+        //console.log("provincia::::::::",provincia.path)
         return ( 
-                <>
-                    <g onClick={() => console.log("HIZO CLICK!!!!!!!!!!!!!!!!!",provincia.nombre)}>
-                    {provincia.path};
+                <Fragment>
+                    <g onClick={() => console.log("HIZO CLICK!!!!!!!!!!!!!!!!!",provincia.nombre)} id={provincia.nombre.replace(/\s/g, '').toLowerCase()}>
+                        {provincia.path};
+                        <Tooltip placement="right" isOpen={tooltipOpen} target={provincia.nombre.replace(/\s/g, '').toLowerCase()} toggle={toggle}>
+                        Hola Pais
+                        </Tooltip>
                     </g>
-                </>
+                </Fragment>
 
             
 
