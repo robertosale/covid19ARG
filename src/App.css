@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
-body{
+#root{
   background-color: #282c34;
 }
 
@@ -12,6 +12,7 @@ body{
   min-height: 100vh;
   align-items: center;
   font-family: 'Roboto', sans-serif;
+  max-width: 1024px;
 }
 
 .App-header {
@@ -35,6 +36,7 @@ body{
     width: 55% !important;
     margin-top: 20px; 
     opacity: 0.85;
+    padding: 10px !important;
   
   }
   .card-stats p {
@@ -48,4 +50,8 @@ body{
   }
   
   
+}
+
+h5{
+  margin:0 !important;
 }
