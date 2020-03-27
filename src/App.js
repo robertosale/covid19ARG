@@ -19,8 +19,8 @@ class App extends Component {
   render() { 
     //console.log("pais:::::::::::::",pais)
     return (
-      <div className="App container">
-        <h2>CoronaVirus ARG</h2>
+      <div className="App container-fluid">
+        <h2>Mapa de COVID-19 en Argentina</h2>
         <div className=" row">
       
          <ContainerProvincias pais={pais} />
