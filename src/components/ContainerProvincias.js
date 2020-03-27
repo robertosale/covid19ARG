@@ -10,7 +10,8 @@ class ContainerProvincias extends Component {
     
 
     render() { 
-      const {pais}=this.props;
+
+      const {pais} = this.props;
 
         return (
 
@@ -26,7 +27,7 @@ class ContainerProvincias extends Component {
       <g id="prefix__Capa_2" data-name="Capa 2">
         <g id="prefix__svg2">
           <g id="prefix__layer1"></g>
-          {pais.map(mapaProvincia => <Provincia provincia={mapaProvincia}/>)}
+          {pais.map(prov => <Provincia provincia={prov}/>)}
           </g>
         </g>
       
