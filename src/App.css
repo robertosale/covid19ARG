@@ -1,68 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
 .App {
   text-align: center;
+  background-color: #282c34;
+  color: white;
+  font-size: calc(8px + 2vmin);
+  min-height: 100vh;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
 }
-
-.App-logo {
-  height: 90vh;
-  pointer-events: none;
-}
-
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-
-  font-size: calc(8px + 2vmin);
-  color: white;
 }
-
 /* todos los items que empiecen su ID con Prefix */
 [id^="path"]:hover{
   fill: #7e2337;
   transition: 0.5s ease;
 }
-
-.tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
+.card-stats img{
+ height: 35px;   
 }
 
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -60px;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
 
-.tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
-}
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  .card-stats{
+    height: 20vh;
+    width: 55% !important;
+    margin-top: 20px; 
+    opacity: 85%;
+  
+  }
+  .card-stats p {
+    font-size: calc(15px + 2vmin);
+  }
+  .card-stats h5 {
+    font-size: calc(20px + 2vmin);
+  }
+  .card-stats img{
+    height: 70px;
+  }
   
   
-  
+}
