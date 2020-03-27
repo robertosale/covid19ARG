@@ -57,7 +57,8 @@ class Provincia extends Component {
                 const aComparar = element.columns[0].replace(/\s/g, '').toLowerCase();                
                 if(aComparar == provinciaId){                    
                     this.state.columns=element.columns;                    
-                }                            
+                }
+                else this.state.columns=["",0,0,0,0];                            
             })        
     } 
 
