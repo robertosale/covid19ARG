@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import logo from './argMap.svg';
 import './App.css';
-
+import BottomStats from './components/BottomStats'
 import pais from './svgs/pais'
 
 import ContainerProvincias from './components/ContainerProvincias';
@@ -15,10 +14,11 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1>CoronaVirus ARG</h1>
+          <h2>CoronaVirus ARG</h2>
          <ContainerProvincias pais={pais} />
-         
+         <BottomStats/>
         </header>
+
       </div>
     );
   }
