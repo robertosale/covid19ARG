@@ -7,7 +7,9 @@ import pais from './svgs/pais'
 import ContainerProvincias from './components/ContainerProvincias';
 
 class App extends Component {
-  state = {  }
+  state = {
+      
+    }
   render() { 
     //console.log("pais:::::::::::::",pais)
     return (
