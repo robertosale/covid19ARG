@@ -1,5 +1,5 @@
 import React, { Component,Fragment } from 'react';
-import { Tooltip, Popover, PopoverHeader, PopoverBody } from 'reactstrap';
+import {Popover, PopoverHeader, PopoverBody } from 'reactstrap';
 
 
 const stats =  [

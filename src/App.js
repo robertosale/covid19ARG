@@ -19,13 +19,15 @@ class App extends Component {
   render() { 
     //console.log("pais:::::::::::::",pais)
     return (
-      <div className="App">
-        <header className="App-header">
-          <h2>CoronaVirus ARG</h2>
+      <div className="App container">
+        <h2>CoronaVirus ARG</h2>
+        <div className=" row">
+      
          <ContainerProvincias pais={pais} />
          <BottomStats/>
-        </header>
-
+         <div className="col-12 fixed-bottom"><span>Powered by IngeniArt</span></div>
+        </div>
+     
       </div>
     );
   }
