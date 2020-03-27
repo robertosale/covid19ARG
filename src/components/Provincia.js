@@ -52,14 +52,18 @@ class Provincia extends Component {
 
     comparador(provinciaId){
         
-            
+            var flag = false;
             stats.map(element => {
+                
                 const aComparar = element.columns[0].replace(/\s/g, '').toLowerCase();                
                 if(aComparar == provinciaId){                    
-                    this.state.columns=element.columns;                    
+                    this.state.columns=element.columns;
+                    flag = true;                    
                 }
-                else this.state.columns=["",0,0,0,0];                            
-            })        
+                
+                                            
+            })
+            if(!flag) this.state.columns=["",0,0,0,0]        
     } 
 
     render() { 
