@@ -70,3 +70,13 @@ a:visited{
 h5{
   margin:0 !important;
 }
+
+
+@media (max-width: 576px) { 
+  .card-stats h5{
+    font-size: 28px;
+  }
+  .card-stats{
+    margin: 5px;
+  }
+}
