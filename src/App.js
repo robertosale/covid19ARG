@@ -18,7 +18,7 @@ const stats =  [
   { columns: ["Mendoza", "8", "0", "1", "7"] },
   { columns: ["Neuquén", "11", "0", "0", "7"] },
   { columns: ["Entre Ríos", "11", "0", "0", "6"] },
-  { columns: ["San Luís", "6", "0", "0", "6"] },
+  { columns: ["San Luis", "6", "0", "0", "6"] },
   { columns: ["Río Negro", "7", "1", "1", "5"] },
   { columns: ["Corrientes", "5", "0", "0", "3"] },
   { columns: ["Jujuy", "3", "0", "0", "3"] },
