@@ -48,7 +48,7 @@ class BottomStats extends Component {
                             </div>
                             <div className="col-6 col-sm-12 p-0 align-self-center">
                                 <p className="m-0 d-none d-sm-block">Recuperados</p>
-                                <h5 >{total[3]}</h5>
+                                <h5 >{total[2]}</h5>
                             </div>
 
                         </div>
