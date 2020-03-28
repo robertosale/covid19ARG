@@ -51,7 +51,7 @@ class App extends Component {
          <ContainerProvincias pais={pais} stats={stats}/>
          <BottomStats total ={total}/>
 
-         <div className="col-12 fixed-bottom"><span>Powered by IngeniArt</span></div>
+         <div className="col-12 fixed-bottom"><span>Developed by <a href="https://www.linkedin.com/in/roberto-moises-sale-563829187/">Robert</a> y <a href="https://www.linkedin.com/in/benja-montero-9238a1119/">Benja</a> </span></div>
         </div>
      
       </div>

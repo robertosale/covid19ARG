@@ -15,17 +15,17 @@ class BottomStats extends Component {
 
                     <div className='card-stats col-lg-12 col-3 btn btn-secondary pr-2 pl-2 pb-0 pt-0'>
                         <img src={logoInfectados} />
-                        <p className="m-0 ">Infectados</p>
+                        <p className="m-0 d-none d-sm-block">Infectados</p>
                         <h5>{total[1]}</h5>
                     </div>
                     <div className='card-stats col-lg-12 col-3 btn btn-danger pr-2 pl-2 pb-0 pt-0'>
                         <img src={logoMuertos} />
-                        <p className="m-0">Fallecidos</p>
+                        <p className="m-0 d-none d-sm-block">Fallecidos</p>
                         <h5>{total[2]}</h5>
                     </div>
                     <div className='card-stats col-lg-12 col-3 btn btn-success pr-2 pl-2 pb-0 pt-0'>
                         <img src={logoRecuperados} />
-                        <p className="m-0">Recuperados</p>
+                        <p className="m-0 d-none d-sm-block">Recuperados</p>
                         <h5>{total[3]}</h5>
 
                     </div>

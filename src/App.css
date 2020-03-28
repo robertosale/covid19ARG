@@ -28,6 +28,20 @@
  height: 35px;   
 }
 
+.fixed-bottom{
+  font-size: calc(4px + 2vmin);
+}
+a:link{
+  text-decoration: none !important;
+  color: white;
+}
+a:hover{
+  color: #6c757d !important;
+}
+a:visited{
+  color: white;
+}
+
 
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
