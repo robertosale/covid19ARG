@@ -6,6 +6,7 @@ class BottomStats extends Component {
     render() {
         const {total}=this.props;
         return (
+
             <div class="col-12 col-lg-6 container align-self-start">
                 <div class="btn-block row justify-content-center ">
                     <div className='d-none d-lg-block col-lg-12 col-3 p-0 m-0'>
@@ -26,6 +27,7 @@ class BottomStats extends Component {
                         <img src={logoRecuperados} />
                         <p className="m-0">Recuperados</p>
                         <h5>{total[3]}</h5>
+
                     </div>
 
                 </div>

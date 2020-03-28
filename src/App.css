@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+
 #root{
   background-color: #282c34;
 }
-
-
 .App {
   text-align: center;
   background-color: #282c34;
@@ -14,11 +13,12 @@
   font-family: 'Roboto', sans-serif;
   max-width: 1024px;
 }
-
 .App-header {
   display: flex;
   flex-direction: column;
 }
+
+
 /* todos los items que empiecen su ID con Prefix */
 [id^="path"]:hover{
   fill: #7e2337;
@@ -37,6 +37,7 @@
     margin-top: 20px; 
     opacity: 0.85 !important;
     padding: 10px !important;
+    opacity: 85%;
   
   }
   .card-stats p {
@@ -48,7 +49,7 @@
   .card-stats img{
     height: 70px;
   }
-  
+
   
 }
 
