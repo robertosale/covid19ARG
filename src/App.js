@@ -41,7 +41,7 @@ class App extends Component {
 
   render() { 
     const total = stats[stats.length-1].columns;
-    //console.log("pais:::::::::::::",pais)
+    console.log("window.innerHeight:::::::::::::",window.innerHeight)
     return (
 
       <div className="App container-fluid">

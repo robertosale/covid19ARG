@@ -77,6 +77,17 @@ h5{
     font-size: 28px;
   }
   .card-stats{
-    margin: 5px;
+    margin: 0px;
+    
+  }
+
+  .card-stats.btn-secondary{
+    right:3px;
+     
+    
+  }
+
+  .card-stats.btn-success{
+    left:3px;
   }
 }
