@@ -45,7 +45,7 @@ class App extends Component {
     return (
 
       <div className="App container-fluid">
-        <h2>COVID-19 Argentina</h2>
+        <h3 className="mb-0">COVID-19 Argentina</h3>
         <div className=" row">
       
          <ContainerProvincias pais={pais} stats={stats}/>
