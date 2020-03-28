@@ -13,9 +13,7 @@ class Provincia extends Component {
     
     this.state = { popoverOpen: false,
                    columns:[] }
-    const provinciaId = this.props.provincia.nombre.replace(/\s/g, '').toLowerCase();
     
-    this.comparador(provinciaId);
     
     
     }
@@ -25,19 +23,35 @@ class Provincia extends Component {
         return provincia;
     }
 
+    componentDidMount(){
+        const provinciaId = this.props.provincia.nombre.replace(/\s/g, '').toLowerCase();
+    
+        this.comparador(provinciaId);
+    }
+
 
 
 
 
     comparador(provinciaId){
+            console.log("entro a comparador")
         
-            var flag = false;
+            let flag = false;
+            let caba = [];
             this.props.stats.map(element => {
                 
-                const aComparar = element.columns[0].replace(/\s/g, '').toLowerCase();                
-                if(aComparar == provinciaId){                    
+                const aComparar = element.columns[0].replace(/\s/g, '').toLowerCase();
+                if(aComparar == "caba"){
+                    caba = element.columns;
+                    
+                }                
+                if(aComparar == provinciaId){         
                     this.state.columns=element.columns;
-                    flag = true;                    
+                    flag = true;
+                    if(aComparar=="buenosaires"){
+                        for(let i=1;i<5;i++) element.columns[i] = parseInt(element.columns[i])+parseInt(caba[i]);
+                                               
+                    }                    
                 }
                 
                                             
@@ -46,6 +60,7 @@ class Provincia extends Component {
     } 
 
     render() { 
+        console.log("RENDERIZO")
         
         const {popoverOpen,columns} = this.state;
         const {provincia, stats} = this.props;
