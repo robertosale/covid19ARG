@@ -7,26 +7,26 @@ import ReactGA from 'react-ga';
 import ContainerProvincias from './components/ContainerProvincias';
 
 const stats =  [
-  { columns: ["CABA", "194", "4", "3", "187"] },
-  { columns: ["Buenos Aires", "161", "4", "1", "156"] },
-  { columns: ["Chaco", "55", "4", "0", "51"] },
-  { columns: ["Santa Fe", "54", "0", "0", "54"] },
-  { columns: ["Córdoba", "53", "0", "0", "53"] },
+  { columns: ["CABA", "240", "53", "6", "181"] },
+  { columns: ["Buenos Aires", "194", "15", "4", "175"] },
+  { columns: ["Chaco", "59", "0", "4", "51"] },
+  { columns: ["Santa Fe", "63", "0", "0", "54"] },
+  { columns: ["Córdoba", "57", "1", "0", "56"] },
   { columns: ["Tierra del fuego", "14", "0", "0", "14"] },
-  { columns: ["Santa Cruz", "9", "0", "0", "9"] },
-  { columns: ["Tucumán", "9", "0", "0", "9"] },
-  { columns: ["Mendoza", "7", "0", "0", "7"] },
-  { columns: ["Neuquén", "7", "0", "0", "7"] },
-  { columns: ["Entre Ríos", "6", "0", "0", "6"] },
-  { columns: ["San Luís", "6", "0", "0", "6"] },
-  { columns: ["Río Negro", "4", "0", "0", "4"] },
-  { columns: ["Corrientes", "3", "0", "0", "3"] },
+  { columns: ["Santa Cruz", "8", "0", "0", "9"] },
+  { columns: ["Tucumán", "15", "0", "0", "9"] },
+  { columns: ["Mendoza", "8", "0", "1", "7"] },
+  { columns: ["Neuquén", "11", "0", "0", "7"] },
+  { columns: ["Entre Ríos", "11", "0", "0", "6"] },
+  { columns: ["San Luis", "6", "0", "0", "6"] },
+  { columns: ["Río Negro", "7", "1", "1", "5"] },
+  { columns: ["Corrientes", "5", "0", "0", "3"] },
   { columns: ["Jujuy", "3", "0", "0", "3"] },
   { columns: ["La Pampa", "1", "0", "0", "1"] },
-  { columns: ["Misiones", "1", "0", "0", "1"] },
+  { columns: ["Misiones", "2", "0", "0", "1"] },
   { columns: ["Salta", "1", "0", "0", "1"] },
-  { columns: ["Santiago del Estero", "1", "0", "0", "1"] },
-  { columns: ["TOTAL", "589", "12", "4", "573"] }
+  { columns: ["Santiago del Estero", "2", "0", "0", "1"] },
+  { columns: ["TOTAL", "690", "70", "16", "620"] }
 ];
 
 class App extends Component {
@@ -41,7 +41,7 @@ class App extends Component {
 
   render() { 
     const total = stats[stats.length-1].columns;
-    //console.log("pais:::::::::::::",pais)
+    console.log("window.innerHeight:::::::::::::",window.innerHeight)
     return (
 
       <div className="App container-fluid">

@@ -13,7 +13,7 @@ class BottomStats extends Component {
                         <h1>Total</h1>
                     </div>
 
-                    <div className='card-stats col-lg-12 col-3 btn btn-secondary pr-2 pl-2 pb-0 pt-0'>
+                    <div className='card-stats col-lg-12 col-4 btn btn-secondary pr-2 pl-2 pb-0 pt-0'>
                         <div className="row">
                             <div className="col-6 col-sm-12">
                                 <img src={logoInfectados} />
@@ -26,14 +26,14 @@ class BottomStats extends Component {
                         </div>
                     </div>
 
-                    <div className='card-stats col-lg-12 col-3 btn btn-danger pr-2 pl-2 pb-0 pt-0'>
+                    <div className='card-stats col-lg-12 col-4 btn btn-danger pr-2 pl-2 pb-0 pt-0'>
                         <div className="row">
                             <div className="col-6 col-sm-12">
                                 <img src={logoMuertos} />
                             </div>
                             <div className="col-6 col-sm-12 p-0 align-self-center">
                                 <p className="m-0 d-none d-sm-block">Fallecidos</p>
-                                <h5>{total[2]}</h5>
+                                <h5>{total[3]}</h5>
                             </div>
 
                         </div>
@@ -41,14 +41,14 @@ class BottomStats extends Component {
 
 
 
-                    <div className='card-stats col-lg-12 col-3 btn btn-success pr-2 pl-2 pb-0 pt-0'>
+                    <div className='card-stats col-lg-12 col-4 btn btn-success pr-2 pl-2 pb-0 pt-0'>
                         <div className="row">
                             <div className="col-6 col-sm-12">
                                 <img src={logoRecuperados} />
                             </div>
                             <div className="col-6 col-sm-12 p-0 align-self-center">
                                 <p className="m-0 d-none d-sm-block">Recuperados</p>
-                                <h5 >{total[3]}</h5>
+                                <h5 >{total[2]}</h5>
                             </div>
 
                         </div>
