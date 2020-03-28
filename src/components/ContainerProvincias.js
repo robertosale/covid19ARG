@@ -11,10 +11,12 @@ class ContainerProvincias extends Component {
 
   render() {
 
-    const { pais } = this.props;
+
+    const { pais ,stats} = this.props;
 
     return (
-      <div className="col-12 col-lg-6">
+      <div className="col-12 col-lg-6 align-self-end">
+
       <svg width='40vh' viewBox="0 0 1948.2 3756.13" {...this.props}>
         <defs>
           <style>
@@ -27,7 +29,9 @@ class ContainerProvincias extends Component {
         <g id="prefix__Capa_2" data-name="Capa 2">
           <g id="prefix__svg2">
             <g id="prefix__layer1"></g>
-            {pais.map(prov => <Provincia provincia={prov} />)}
+
+            {pais.map(prov => <Provincia provincia={prov} stats={stats} />)}
+
           </g>
         </g>
 

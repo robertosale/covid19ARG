@@ -2,6 +2,7 @@ import React, { Component,Fragment } from 'react';
 import {Popover, PopoverHeader, PopoverBody } from 'reactstrap';
 
 
+
 const stats =  [
     { columns: ["CABA", "194", "4", "3", "187"] },
     { columns: ["Buenos Aires", "161", "4", "1", "156"] },
@@ -28,15 +29,14 @@ const stats =  [
 
 
 
+
 class Provincia extends Component {
     constructor(props) {
     super(props);
     
     this.state = { popoverOpen: false,
                    columns:[] }
-    const provinciaId = this.props.provincia.nombre.replace(/\s/g, '').toLowerCase();
     
-    this.comparador(provinciaId);
     
     
     }
@@ -46,19 +46,35 @@ class Provincia extends Component {
         return provincia;
     }
 
+    componentDidMount(){
+        const provinciaId = this.props.provincia.nombre.replace(/\s/g, '').toLowerCase();
+    
+        this.comparador(provinciaId);
+    }
+
 
 
 
 
     comparador(provinciaId){
+            console.log("entro a comparador")
         
-            var flag = false;
-            stats.map(element => {
+            let flag = false;
+            let caba = [];
+            this.props.stats.map(element => {
                 
-                const aComparar = element.columns[0].replace(/\s/g, '').toLowerCase();                
-                if(aComparar == provinciaId){                    
+                const aComparar = element.columns[0].replace(/\s/g, '').toLowerCase();
+                if(aComparar == "caba"){
+                    caba = element.columns;
+                    
+                }                
+                if(aComparar == provinciaId){         
                     this.state.columns=element.columns;
-                    flag = true;                    
+                    flag = true;
+                    if(aComparar=="buenosaires"){
+                        for(let i=1;i<5;i++) element.columns[i] = parseInt(element.columns[i])+parseInt(caba[i]);
+                                               
+                    }                    
                 }
                 
                                             
@@ -67,9 +83,10 @@ class Provincia extends Component {
     } 
 
     render() { 
+        console.log("RENDERIZO")
         
         const {popoverOpen,columns} = this.state;
-        const {provincia} = this.props;
+        const {provincia, stats} = this.props;
 
         const toggle = ()=> this.setState({popoverOpen:!popoverOpen})
         const provinciaId = provincia.nombre.replace(/\s/g, '').toLowerCase();
