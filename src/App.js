@@ -43,12 +43,14 @@ class App extends Component {
     const total = stats[stats.length-1].columns;
     //console.log("pais:::::::::::::",pais)
     return (
+
       <div className="App container-fluid">
         <h2>COVID-19 Argentina</h2>
         <div className=" row">
       
          <ContainerProvincias pais={pais} stats={stats}/>
          <BottomStats total ={total}/>
+
          <div className="col-12 fixed-bottom"><span>Powered by IngeniArt</span></div>
         </div>
      
