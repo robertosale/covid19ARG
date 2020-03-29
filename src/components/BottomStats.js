@@ -13,21 +13,21 @@ class BottomStats extends Component {
             <div class="container-stats position-absolute ">
                 <div class="mx-auto d-flex flex-column align-self-end">
                     <div className='d-md-none'>
-                        <div className='text-right pr-3'>
-                            <h2>Total</h2>
-                        </div>
+                       
 
-                        <div className='container-stats-info d-flex flex-row border justify-content-end rounded-pill '>
+
+                        <div className='container-stats-info d-flex flex-row border justify-content-end rounded '>
                             <p className="pr-3" >{total.Infectados}</p>
-                            <img className='stats-icon border-left' src={logoInfectados} />
+                            <img className='stats-icon border-left' src={CoronaCard} />
                         </div>
-                        <div className='container-stats-info d-flex flex-row border justify-content-end rounded-pill '>
-                            <p className="pr-3" >{total.Fallecidos}</p>
-                            <img className='stats-icon border-left' src={logoMuertos} />
+                        <div className='container-stats-info d-flex flex-row border justify-content-end rounded '>
+                            <p className="pr-3 stats-txt" >{total.Fallecidos}</p>
+                            <img className='stats-icon border-left' src={MuertosCard} />
                         </div>
-                        <div className='container-stats-info d-flex flex-row border justify-content-end rounded-pill '>
+                        <div className='container-stats-info d-flex flex-row border justify-content-end rounded '>
                             <p className="pr-3" >{total.Recuperados}</p>
-                            <img className='stats-icon border-left ' src={logoRecuperados} />
+                            <img className='stats-icon border-left ' src={RecuperadosCard} />
+
 
                         </div>
                     </div>

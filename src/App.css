@@ -7,17 +7,13 @@
   background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.container-app{
-}
-.container-mapa{
 
-}
 .home-tittle{right: 6px; font-size: 2em;}
 .home-sub-tittle{right:6px; top:33px;color: white;}
 
 .mapa{
   width: auto; 
-  height: 100%;
+  height: 95%;
   /* background-color: red; */
 }
 .cls-1,.cls-2,.cls-3,.cls-4{
@@ -26,7 +22,7 @@
   
 
 .container-stats{
-  color: white;
+
   bottom: 10%;
   right: 2%;
 }
@@ -34,15 +30,20 @@
   padding: 2px;
   width: 140px;
   margin-bottom: 5px;
+  background-color: white;
 }
 .container-stats-info p{
   font-size: 31px;
   margin: 0px;
+  color: #000;
+  font-weight: 500;
+
 }
 .stats-icon{
  width: 50px;
-
 }
+
+
 
 /* todos los items que empiecen su ID con Prefix */
 [id^="path"]:hover{
@@ -50,14 +51,18 @@
   transition: 0.5s ease;
 }
 
-
-
- /* entre */
-/* @media only screen and (max-width: 360px) and (min-width: 320px) {  
-  .mapa{
-     max-height: calc(100vh - 56px);
+.footer{
+  background-color: #362C28;
+  color: white;
+  
 }
-} */
+.fotter a{
+  color: white !important;
+  opacity: 0;
+}
+a:link{text-decoration: none !important;}
+a:visited{color: white;}
+a:hover{color: #6dd5ed !important;}
 /* a partir de.... */
 @media only screen and (min-width: 480px) {  
   .home-tittle{
@@ -79,38 +84,31 @@
     right: 8px;
     font-size: 3em;
  }
-
+ .container-stats{
+  bottom: 3%;
 }
 
+}
 .snip1578 {
 
   position: relative;
-  margin: 10px;
   min-width: 230px;
-  max-width: 315px;
+  max-width: 25vw;
   width: 100%;
   color: #000;
   text-align: left;
-  font-size: 24px;
+  font-size: 1.3em;
   background: #fff;
   border-radius: 5px;
-  margin-bottom: 40px;
-  height: 150px;
+  height: 20vh;
+  margin-bottom: 12px;
 }
 
-.snip1578 *,
-.snip1578:before,
-.snip1578:after {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-}
 
 .snip1578 img {
-  max-width: 35%;
-  margin-top: -35px;
-  margin-left: 60%;
+  max-width: 30%;
+  margin-top: -5%;
+  margin-left: 70%;
   margin-bottom: 15px;
   backface-visibility: hidden;
   vertical-align: top;
@@ -128,12 +126,13 @@
 
 .snip1578 h3 {
   margin: 0;
-  font-size: 1.3em;
+  font-size: 1.2em;
   font-weight: normal;
 }
 
 .snip1578 .icons {
-  font-size: 4rem;
+  font-size: 3.2rem;
+  font-weight: 500;
 }
 
 

@@ -9,9 +9,11 @@ import ContainerProvincias from "./components/ContainerProvincias";
 
 const userRef = firebaseApp.database().ref().child('user');
 
+
 class App extends Component {
   state = {
     height: window.innerHeight,
+
     stats : [{
               Activos:0,
               Confirmados:0,
@@ -23,9 +25,11 @@ class App extends Component {
 
   
 
+
   updateHeight = () => {
     this.setState({ height: window.innerHeight });
   };
+
 
   listenForUser = () => {
     console.log(userRef);
@@ -50,6 +54,7 @@ class App extends Component {
     window.removeEventListener("resize", this.updateHeight);
   }
 
+
   render() {
     const { height,stats } = this.state;
     const total = stats[0];
@@ -62,11 +67,20 @@ class App extends Component {
         <h2 className="home-tittle position-absolute">Argentina</h2>
         <h5 className="home-sub-tittle position-absolute">COVID-19</h5>
         <div className="row">
+
+
           <ContainerProvincias pais={pais} stats={stats} height={height} />
           <BottomStats total={total} />
 
-          {/* <div className="col-12 fixed-bottom"><span>Developed by <a href="https://www.linkedin.com/in/roberto-moises-sale-563829187/">Robert</a> y <a href="https://www.linkedin.com/in/benja-montero-9238a1119/">Benja</a> </span></div> */}
+          <div className="footer col-12 fixed-bottom text-center">
+            <span>Developed by 
+             <a href="https://www.linkedin.com/in/roberto-moises-sale-563829187/"> Robert</a> y
+           <a href="https://www.linkedin.com/in/benja-montero-9238a1119/"> Benja</a> - CovVid V.1.2
+            </span>
+          </div>
         </div>
+
+
       </div>
     );
   }
