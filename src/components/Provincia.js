@@ -3,53 +3,31 @@ import {Popover, PopoverHeader, PopoverBody } from 'reactstrap';
 
 
 
-const stats =  [
-    { columns: ["CABA", "194", "4", "3", "187"] },
-    { columns: ["Buenos Aires", "161", "4", "1", "156"] },
-    { columns: ["Chaco", "55", "4", "0", "51"] },
-    { columns: ["Santa Fe", "54", "0", "0", "54"] },
-    { columns: ["Córdoba", "53", "0", "0", "53"] },
-    { columns: ["Tierra del fuego", "14", "0", "0", "14"] },
-    { columns: ["Santa Cruz", "9", "0", "0", "9"] },
-    { columns: ["Tucumán", "9", "0", "0", "9"] },
-    { columns: ["Mendoza", "7", "0", "0", "7"] },
-    { columns: ["Neuquén", "7", "0", "0", "7"] },
-    { columns: ["Entre Ríos", "6", "0", "0", "6"] },
-    { columns: ["San Luís", "6", "0", "0", "6"] },
-    { columns: ["Río Negro", "4", "0", "0", "4"] },
-    { columns: ["Corrientes", "3", "0", "0", "3"] },
-    { columns: ["Jujuy", "3", "0", "0", "3"] },
-    { columns: ["La Pampa", "1", "0", "0", "1"] },
-    { columns: ["Misiones", "1", "0", "0", "1"] },
-    { columns: ["Salta", "1", "0", "0", "1"] },
-    { columns: ["Santiago del Estero", "1", "0", "0", "1"] },
-    { columns: ["TOTAL", "589", "12", "4", "573"] }
-  ];
-
-
-
-
-
 class Provincia extends Component {
     constructor(props) {
     super(props);
     
     this.state = { popoverOpen: false,
-                   columns:[] }
+                   datoProv:this.props.stats} 
+    console.log("constructorProvincia",this.props.stats)
     
     
     
     }
 
     getProvinciaId(provincia){
-        provincia.nombre.replace(/\s/g, '').toLowerCase();
+        provincia = provincia.nombre.replace(/\s/g, '').toLowerCase();
         return provincia;
     }
 
     componentDidMount(){
-        const provinciaId = this.props.provincia.nombre.replace(/\s/g, '').toLowerCase();
-    
-        this.comparador(provinciaId);
+            
+        this.comparador(this.getProvinciaId(this.props.provincia));
+    }
+
+    getSnapshotBeforeUpdate(){
+        console.log("GetSnapshot::::::::::::::::::::::::::::")
+        this.comparador(this.getProvinciaId(this.props.provincia));
     }
 
 
@@ -60,33 +38,41 @@ class Provincia extends Component {
             console.log("entro a comparador")
         
             let flag = false;
-            let caba = [];
+            let caba = {};
             this.props.stats.map(element => {
-                
-                const aComparar = element.columns[0].replace(/\s/g, '').toLowerCase();
-                if(aComparar == "caba"){
-                    caba = element.columns;
+                console.log("Stattss:::::::::::::::.",element)
+                const aComparar = element.Distrito.replace(/\s/g, '').toLowerCase();
+                console.log("aComparar:::::::::::::",aComparar);
+                console.log("provinciaId:::::::::::::",provinciaId);
+                if(aComparar == "ciudaddebuenosaires"){
+                    caba = element;
                     
                 }                
                 if(aComparar == provinciaId){         
-                    this.state.columns=element.columns;
+                    this.state.datoProv=element;
                     flag = true;
+                    console.log("Coincidencia en acomparar provinciaid")
                     if(aComparar=="buenosaires"){
-                        for(let i=1;i<5;i++) element.columns[i] = parseInt(element.columns[i])+parseInt(caba[i]);
+                        
+                        element.Activos += caba.Activos;
+                        element.Confirmados += caba.Confirmados;
+                        element.Fallecidos += caba.Fallecidos;
+                        element.Recuperados += caba.Recuperados; 
                                                
                     }                    
                 }
                 
                                             
             })
-            if(!flag) this.state.columns=["",0,0,0,0]        
+            if(!flag) this.state.datoProv={}        
     } 
 
     render() { 
-        console.log("RENDERIZO")
-        
-        const {popoverOpen,columns} = this.state;
+                
+        const {popoverOpen,datoProv} = this.state;
         const {provincia, stats} = this.props;
+
+        console.log("datoProv:::::::::::::::::",datoProv);
 
         const toggle = ()=> this.setState({popoverOpen:!popoverOpen})
         const provinciaId = provincia.nombre.replace(/\s/g, '').toLowerCase();
@@ -99,9 +85,9 @@ class Provincia extends Component {
                         <Popover placement="bottom" isOpen={popoverOpen} target={provinciaId} trigger="hover" toggle={toggle}>
                             <PopoverHeader>{provincia.nombre}</PopoverHeader>
                             <PopoverBody>
-                                Confirmados: {columns[1]} <br/>
-                                Muertos: {columns[3]} <br/>
-                                Recuperados: {columns[2]} <br/>
+                                Confirmados: {datoProv.Confirmados} <br/>
+                                Muertos: {datoProv.Fallecidos} <br/>
+                                Recuperados: {datoProv.Recuperados} <br/>
                                 
                             
                             </PopoverBody>
