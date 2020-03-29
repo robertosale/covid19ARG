@@ -11,8 +11,8 @@ class ContainerProvincias extends Component {
 
   render() {
 
-    const height = window.innerHeight;
-    const { pais ,stats} = this.props;
+
+    const { pais ,stats, height} = this.props;
 
     return (
       <div className="container-mapa col-12 col-lg-6 p-0 " style={{maxHeight:`${height}px`}}>

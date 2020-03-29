@@ -31,18 +31,26 @@ const stats =  [
 
 class App extends Component {
   state = {
-      
+    height: window.innerHeight,
+    }
+    updateHeight=()=>{
+    this.setState({height : window.innerHeight});
+    };
+    
+    componentDidMount(){
+    ReactGA.initialize('UA-162056074-1');
+    ReactGA.pageview('/homepage');
+    window.addEventListener("resize", this.updateHeight);
+    }
+    
+    componentWillUnmount(){
+    window.removeEventListener("resize",this.updateHeight);
     }
 
-  // componentDidMount(){
-  //   ReactGA.initialize('UA-162056074-1');
-  //   ReactGA.pageview('/homepage');
-  // }
-
   render() { 
-    const height = window.innerHeight;
     const total = stats[stats.length-1].columns;
-    console.log("window.innerHeight:::::::::::::",window.innerHeight)
+    const {height} = this.state;
+
     return (
 
       <div className="container-app container position-relative" >
@@ -50,7 +58,7 @@ class App extends Component {
         <h5 className='home-sub-tittle position-absolute'>COVID-19</h5>
         <div className="row">
       
-         <ContainerProvincias pais={pais} stats={stats}/>
+         <ContainerProvincias pais={pais} stats={stats} height={height}/>
          <BottomStats total ={total}/>
 
          {/* <div className="col-12 fixed-bottom"><span>Developed by <a href="https://www.linkedin.com/in/roberto-moises-sale-563829187/">Robert</a> y <a href="https://www.linkedin.com/in/benja-montero-9238a1119/">Benja</a> </span></div> */}
