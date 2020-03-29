@@ -2,61 +2,68 @@ import React, { Component } from 'react';
 import logoInfectados from "./img/infectados.png";
 import logoMuertos from "./img/muertos.png";
 import logoRecuperados from "./img/recuperados.png";
+import CoronaCard from "./img/coronaCard.png";
+import MuertosCard from './img/muertosCard.png'
+import RecuperadosCard from './img/recuperadosCard.png'
 class BottomStats extends Component {
     render() {
         const { total } = this.props;
         return (
 
-            <div class="col-12 col-lg-6 container align-self-start">
-                <div class="btn-block row mx-auto ">
-                    <div className='d-none d-lg-block col-lg-12 col-3 p-0 m-0'>
-                        <h1>Total</h1>
-                    </div>
+            <div class="container-stats position-absolute ">
+                <div class="mx-auto d-flex flex-column align-self-end">
+                    <div className='d-md-none'>
+                       
 
-                    <div className='card-stats col-lg-12 col-4 btn btn-secondary pr-2 pl-2 pb-0 pt-0'>
-                        <div className="row">
-                            <div className="col-6 col-sm-12">
-                                <img src={logoInfectados} />
-                            </div>
-                            <div className="col-6 col-sm-12 p-0 align-self-center">
-                                <p className="m-0 d-none d-sm-block">Infectados</p>
-                                <h5 >{total[1]}</h5>
 
-                            </div>
+                        <div className='container-stats-info d-flex flex-row border justify-content-end rounded '>
+                            <p className="pr-3" >{total.Confirmados}</p>
+                            <img className='stats-icon border-left' src={CoronaCard} />
                         </div>
-                    </div>
+                        <div className='container-stats-info d-flex flex-row border justify-content-end rounded '>
+                            <p className="pr-3 stats-txt" >{total.Fallecidos}</p>
+                            <img className='stats-icon border-left' src={MuertosCard} />
+                        </div>
+                        <div className='container-stats-info d-flex flex-row border justify-content-end rounded '>
+                            <p className="pr-3" >{total.Recuperados}</p>
+                            <img className='stats-icon border-left ' src={RecuperadosCard} />
 
-                    <div className='card-stats col-lg-12 col-4 btn btn-danger pr-2 pl-2 pb-0 pt-0'>
-                        <div className="row">
-                            <div className="col-6 col-sm-12">
-                                <img src={logoMuertos} />
-                            </div>
-                            <div className="col-6 col-sm-12 p-0 align-self-center">
-                                <p className="m-0 d-none d-sm-block">Fallecidos</p>
-                                <h5>{total[3]}</h5>
-                            </div>
 
                         </div>
                     </div>
 
 
-
-                    <div className='card-stats col-lg-12 col-4 btn btn-success pr-2 pl-2 pb-0 pt-0'>
-                        <div className="row">
-                            <div className="col-6 col-sm-12">
-                                <img src={logoRecuperados} />
-                            </div>
-                            <div className="col-6 col-sm-12 p-0 align-self-center">
-                                <p className="m-0 d-none d-sm-block">Recuperados</p>
-                                <h5 >{total[2]}</h5>
-                            </div>
-
-                        </div>
-
+                    <div className='d-none d-md-block'>
+                        <figure class="snip1578">
+                            <img src={CoronaCard} alt="profile-sample6" />
+                            <figcaption>
+                                <h3>Infectados:</h3>
+                                <div class="icons">
+                                    <p className="pr-3" >{total.Confirmados}</p>
+                                </div>
+                            </figcaption>
+                        </figure>
+                        <figure class="snip1578">
+                            <img src={MuertosCard} alt="profile-sample6" />
+                            <figcaption>
+                                <h3>Fallecidos:</h3>
+                                <div class="icons">
+                                    <p className="pr-3" >{total.Fallecidos}</p>
+                                </div>
+                            </figcaption>
+                        </figure>
+                        <figure class="snip1578">
+                            <img src={RecuperadosCard} alt="profile-sample6" />
+                            <figcaption>
+                                <h3>Recuperados:</h3>
+                                <div class="icons">
+                                    <p className="pr-3" >{total.Recuperados}</p>
+                                </div>
+                            </figcaption>
+                        </figure>
                     </div>
 
                 </div>
-
             </div >
         );
     }
