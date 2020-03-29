@@ -75,7 +75,7 @@ class App extends Component {
           <div className="footer col-12 fixed-bottom text-center">
             <span>Developed by 
              <a href="https://www.linkedin.com/in/roberto-moises-sale-563829187/"> Robert</a> y
-           <a href="https://www.linkedin.com/in/benja-montero-9238a1119/"> Benja</a> - CovVid V.1.2
+           <a href="https://www.linkedin.com/in/benja-montero-9238a1119/"> Benja</a> - CovidArg v1.2
             </span>
           </div>
         </div>
