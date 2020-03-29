@@ -83,8 +83,7 @@ class Provincia extends Component {
     } 
 
     render() { 
-        console.log("RENDERIZO")
-        
+                
         const {popoverOpen,columns} = this.state;
         const {provincia, stats} = this.props;
 

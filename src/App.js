@@ -7,26 +7,26 @@ import ReactGA from 'react-ga';
 import ContainerProvincias from './components/ContainerProvincias';
 
 const stats =  [
-  { columns: ["CABA", "240", "53", "6", "181"] },
-  { columns: ["Buenos Aires", "194", "15", "4", "175"] },
-  { columns: ["Chaco", "59", "0", "4", "51"] },
-  { columns: ["Santa Fe", "63", "0", "0", "54"] },
-  { columns: ["Córdoba", "57", "1", "0", "56"] },
-  { columns: ["Tierra del fuego", "14", "0", "0", "14"] },
+  { columns: ["CABA", "242", "53", "7", "181"] },
+  { columns: ["Buenos Aires", "202", "15", "5", "175"] },
+  { columns: ["Chaco", "64", "0", "4", "51"] },
+  { columns: ["Santa Fe", "76", "0", "0", "54"] },
+  { columns: ["Córdoba", "58", "1", "0", "56"] },
+  { columns: ["Tierra del fuego", "18", "0", "0", "14"] },
   { columns: ["Santa Cruz", "8", "0", "0", "9"] },
   { columns: ["Tucumán", "15", "0", "0", "9"] },
   { columns: ["Mendoza", "8", "0", "1", "7"] },
   { columns: ["Neuquén", "11", "0", "0", "7"] },
   { columns: ["Entre Ríos", "11", "0", "0", "6"] },
-  { columns: ["San Luis", "6", "0", "0", "6"] },
+  { columns: ["San Luis", "5", "0", "0", "6"] },
   { columns: ["Río Negro", "7", "1", "1", "5"] },
-  { columns: ["Corrientes", "5", "0", "0", "3"] },
+  { columns: ["Corrientes", "9", "0", "0", "3"] },
   { columns: ["Jujuy", "3", "0", "0", "3"] },
   { columns: ["La Pampa", "1", "0", "0", "1"] },
   { columns: ["Misiones", "2", "0", "0", "1"] },
   { columns: ["Salta", "1", "0", "0", "1"] },
   { columns: ["Santiago del Estero", "2", "0", "0", "1"] },
-  { columns: ["TOTAL", "690", "70", "16", "620"] }
+  { columns: ["TOTAL", "745", "80", "18", "620"] }
 ];
 
 class App extends Component {
