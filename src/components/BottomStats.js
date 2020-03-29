@@ -18,15 +18,15 @@ class BottomStats extends Component {
                         </div>
 
                         <div className='container-stats-info d-flex flex-row border justify-content-end rounded-pill '>
-                            <p className="pr-3" >{total[1]}</p>
+                            <p className="pr-3" >{total.Infectados}</p>
                             <img className='stats-icon border-left' src={logoInfectados} />
                         </div>
                         <div className='container-stats-info d-flex flex-row border justify-content-end rounded-pill '>
-                            <p className="pr-3" >{total[3]}</p>
+                            <p className="pr-3" >{total.Fallecidos}</p>
                             <img className='stats-icon border-left' src={logoMuertos} />
                         </div>
                         <div className='container-stats-info d-flex flex-row border justify-content-end rounded-pill '>
-                            <p className="pr-3" >{total[2]}</p>
+                            <p className="pr-3" >{total.Recuperados}</p>
                             <img className='stats-icon border-left ' src={logoRecuperados} />
 
                         </div>
@@ -39,7 +39,7 @@ class BottomStats extends Component {
                             <figcaption>
                                 <h3>Infectados:</h3>
                                 <div class="icons">
-                                    <p className="pr-3" >{total[1]}</p>
+                                    <p className="pr-3" >{total.Confirmados}</p>
                                 </div>
                             </figcaption>
                         </figure>
@@ -48,7 +48,7 @@ class BottomStats extends Component {
                             <figcaption>
                                 <h3>Fallecidos:</h3>
                                 <div class="icons">
-                                    <p className="pr-3" >{total[3]}</p>
+                                    <p className="pr-3" >{total.Fallecidos}</p>
                                 </div>
                             </figcaption>
                         </figure>
@@ -57,7 +57,7 @@ class BottomStats extends Component {
                             <figcaption>
                                 <h3>Recuperados:</h3>
                                 <div class="icons">
-                                    <p className="pr-3" >{total[2]}</p>
+                                    <p className="pr-3" >{total.Recuperados}</p>
                                 </div>
                             </figcaption>
                         </figure>

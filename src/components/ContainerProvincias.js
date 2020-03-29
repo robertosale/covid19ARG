@@ -13,8 +13,10 @@ class ContainerProvincias extends Component {
 
 
     const { pais ,stats, height} = this.props;
+    console.log("containerProvinciasStats:::",stats);
 
     return (
+      
       <div className="container-mapa col-12 col-lg-6 p-0 " style={{maxHeight:`${height}px`}}>
 
       <svg className='mapa' viewBox="0 0 1948.2 3756.13" {...this.props}>
