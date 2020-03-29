@@ -51,20 +51,26 @@ class Provincia extends Component {
                 if(aComparar == provinciaId){         
                     this.state.datoProv=element;
                     flag = true;
-                    console.log("Coincidencia en acomparar provinciaid")
+                    console.log("Coincidencia en acomparar provinciaid", this.state.datoProv)
                     if(aComparar=="buenosaires"){
                         
-                        element.Activos += caba.Activos;
-                        element.Confirmados += caba.Confirmados;
-                        element.Fallecidos += caba.Fallecidos;
-                        element.Recuperados += caba.Recuperados; 
+                        this.state.datoProv={
+                            Activos     : element.Activos + caba.Activos,
+                            Confirmados : element.Confirmados + caba.Confirmados,
+                            Fallecidos  : element.Fallecidos + caba.Fallecidos,
+                            Recuperados : element.Recuperados + caba.Recuperados,
+                        }
                                                
                     }                    
                 }
                 
                                             
             })
-            if(!flag) this.state.datoProv={}        
+            if(!flag) this.state.datoProv={
+                                            Confirmados:0,
+                                            Fallecidos:0,
+                                            Recuperados:0
+            }        
     } 
 
     render() { 
