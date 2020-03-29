@@ -34,24 +34,26 @@ class App extends Component {
       
     }
 
-  componentDidMount(){
-    ReactGA.initialize('UA-162056074-1');
-    ReactGA.pageview('/homepage');
-  }
+  // componentDidMount(){
+  //   ReactGA.initialize('UA-162056074-1');
+  //   ReactGA.pageview('/homepage');
+  // }
 
   render() { 
+    const height = window.innerHeight;
     const total = stats[stats.length-1].columns;
     console.log("window.innerHeight:::::::::::::",window.innerHeight)
     return (
 
-      <div className="App container-fluid">
-        <h3 className="mb-0">COVID-19 Argentina</h3>
-        <div className=" row">
+      <div className="container-app container position-relative" >
+        <h2 className='home-tittle position-absolute'>Argentina</h2>
+        <h5 className='home-sub-tittle position-absolute'>COVID-19</h5>
+        <div className="row">
       
          <ContainerProvincias pais={pais} stats={stats}/>
          <BottomStats total ={total}/>
 
-         <div className="col-12 fixed-bottom"><span>Developed by <a href="https://www.linkedin.com/in/roberto-moises-sale-563829187/">Robert</a> y <a href="https://www.linkedin.com/in/benja-montero-9238a1119/">Benja</a> </span></div>
+         {/* <div className="col-12 fixed-bottom"><span>Developed by <a href="https://www.linkedin.com/in/roberto-moises-sale-563829187/">Robert</a> y <a href="https://www.linkedin.com/in/benja-montero-9238a1119/">Benja</a> </span></div> */}
         </div>
      
       </div>
