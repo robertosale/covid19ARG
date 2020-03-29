@@ -17,7 +17,7 @@ class BottomStats extends Component {
 
 
                         <div className='container-stats-info d-flex flex-row border justify-content-end rounded '>
-                            <p className="pr-3" >{total.Infectados}</p>
+                            <p className="pr-3" >{total.Confirmados}</p>
                             <img className='stats-icon border-left' src={CoronaCard} />
                         </div>
                         <div className='container-stats-info d-flex flex-row border justify-content-end rounded '>
