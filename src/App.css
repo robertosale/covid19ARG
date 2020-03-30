@@ -11,15 +11,16 @@
 .home-tittle{right: 6px; font-size: 2em;}
 .home-sub-tittle{right:6px; top:33px;color: white;}
 
+.container-app{
+  max-width: 800px !important;
+}
+
 .mapa{
   width: auto; 
   height: 95%;
-  /* background-color: red; */
 }
-.cls-1,.cls-2,.cls-3,.cls-4{
-  fill: white;
-  }
-  
+
+.cls-1,.cls-2,.cls-3,.cls-4{fill: white; }
 
 .container-stats{
 
@@ -31,6 +32,7 @@
   width: 140px;
   margin-bottom: 5px;
   background-color: white;
+  height: 55px;
 }
 .container-stats-info p{
   font-size: 31px;
@@ -92,16 +94,15 @@ a:hover{color: #6dd5ed !important;}
 .snip1578 {
 
   position: relative;
-  min-width: 230px;
-  max-width: 25vw;
-  width: 100%;
+  min-width: 150px;
+  max-width: 250px;
   color: #000;
   text-align: left;
   font-size: 1.3em;
   background: #fff;
   border-radius: 5px;
-  height: 20vh;
-  margin-bottom: 12px;
+  height: 100px;
+  margin-bottom: 20px;
 }
 
 
