@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import logoInfectados from "./img/infectados.png";
-import logoMuertos from "./img/muertos.png";
-import logoRecuperados from "./img/recuperados.png";
+import CountUp from 'react-countup';
 import CoronaCard from "./img/coronaCard.png";
 import MuertosCard from './img/muertosCard.png'
 import RecuperadosCard from './img/recuperadosCard.png'
@@ -17,15 +15,15 @@ class BottomStats extends Component {
 
 
                         <div className='container-stats-info d-flex flex-row border justify-content-end rounded '>
-                            <p className="pr-3" >{total.Confirmados}</p>
+                            <p className="pr-3" ><CountUp end={total.Confirmados} /></p>
                             <img className='stats-icon border-left' src={CoronaCard} />
                         </div>
                         <div className='container-stats-info d-flex flex-row border justify-content-end rounded '>
-                            <p className="pr-3 stats-txt" >{total.Fallecidos}</p>
+                            <p className="pr-3 stats-txt" ><CountUp end={total.Fallecidos} /></p>
                             <img className='stats-icon border-left' src={MuertosCard} />
                         </div>
                         <div className='container-stats-info d-flex flex-row border justify-content-end rounded '>
-                            <p className="pr-3" >{total.Recuperados}</p>
+                            <p className="pr-3" ><CountUp end={total.Recuperados}/></p>
                             <img className='stats-icon border-left ' src={RecuperadosCard} />
 
 
@@ -39,7 +37,7 @@ class BottomStats extends Component {
                             <figcaption>
                                 <h3>Infectados:</h3>
                                 <div class="icons">
-                                    <p className="pr-3" >{total.Confirmados}</p>
+                                    <p className="pr-3" ><CountUp end={total.Confirmados} /></p>
                                 </div>
                             </figcaption>
                         </figure>
@@ -48,7 +46,7 @@ class BottomStats extends Component {
                             <figcaption>
                                 <h3>Fallecidos:</h3>
                                 <div class="icons">
-                                    <p className="pr-3" >{total.Fallecidos}</p>
+                                    <p className="pr-3" ><CountUp end={total.Fallecidos} /></p>
                                 </div>
                             </figcaption>
                         </figure>
@@ -57,7 +55,7 @@ class BottomStats extends Component {
                             <figcaption>
                                 <h3>Recuperados:</h3>
                                 <div class="icons">
-                                    <p className="pr-3" >{total.Recuperados}</p>
+                                    <p className="pr-3" ><CountUp end={total.Recuperados}/></p>
                                 </div>
                             </figcaption>
                         </figure>
