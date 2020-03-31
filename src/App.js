@@ -18,7 +18,8 @@ class App extends Component {
               Activos:0,
               Confirmados:0,
               Distrito: "",
-              Fallecidos: 0
+              Fallecidos: 0,
+              Recuperados:0
     }]
 
   };
