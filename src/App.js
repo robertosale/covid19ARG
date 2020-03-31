@@ -15,11 +15,12 @@ class App extends Component {
     height: window.innerHeight,
 
     stats : [{
-              Activos:0,
-              Confirmados:0,
-              Distrito: "",
-              Fallecidos: 0
-    }]
+      Activos:0,
+      Confirmados:0,
+      Distrito: "",
+      Fallecidos: 0,
+      Recuperados:0
+}]
 
   };
 
