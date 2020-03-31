@@ -92,7 +92,7 @@ class Provincia extends Component {
                             <PopoverHeader>{provincia.nombre}</PopoverHeader>
                             <PopoverBody>
                                 Confirmados: {datoProv.Confirmados} <br/>
-                                Muertos: {datoProv.Fallecidos} <br/>
+                                Fallecidos: {datoProv.Fallecidos} <br/>
                                 Recuperados: {datoProv.Recuperados} <br/>
                                 
                             
